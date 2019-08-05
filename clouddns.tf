@@ -9,5 +9,5 @@ resource "google_dns_record_set" "frontend" {
 }
 resource "google_dns_managed_zone" "dev" {
   name     = "dev"
-  dns_name = "config-server-service."
+  dns_name = "config-server-service.dev."
 }
