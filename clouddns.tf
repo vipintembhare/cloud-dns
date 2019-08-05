@@ -1,5 +1,5 @@
 resource "google_dns_record_set" "frontend" {
-  name = "${google_dns_managed_zone.prod.dns_name}"
+  name = "${google_dns_managed_zone.dev.dns_name}"
   type = "A"
   ttl  = 300
 
