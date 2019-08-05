@@ -22,7 +22,7 @@ podTemplate(label: label, containers: [
 
         container('terraform') {
           sh 'terraform init'
-          sh 'terraform plan -out myplan'
+          sh 'terraform plan -out clouddns'
         
     
     }
@@ -38,7 +38,7 @@ podTemplate(label: label, containers: [
     stage('TF Apply') {
 
         container('terraform') {
-          sh 'terraform apply -input=false myplan'
+          sh 'terraform apply -input=false clouddns'
         }
 
     }
