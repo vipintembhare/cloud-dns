@@ -5,7 +5,7 @@ resource "google_dns_record_set" "frontend" {
 
   managed_zone = "${google_dns_managed_zone.dev.name}"
 
-  rrdatas = ["35.224.18.23"]
+  rrdatas = ["35.238.109.44"]
 }
 resource "google_dns_managed_zone" "dev" {
   name     = "dev"
