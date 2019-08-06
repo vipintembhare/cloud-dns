@@ -10,4 +10,11 @@ resource "google_dns_record_set" "frontend" {
 resource "google_dns_managed_zone" "dev" {
   name     = "dev"
   dns_name = "config-server-service.dev."
+  visibility = "private"
+
+  private_visibility_config {
+    networks {
+      network_url =  "default"
+    }
+  }
 }
